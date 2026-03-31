@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Portfólio | SideOut</title>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%2300d4aa"/><text x="50" y="72" font-family="Arial" font-size="65" font-weight="bold" fill="%2314141f" text-anchor="middle">S</text></svg>'>
+  
+  <meta name="description" content="Portfólio da agência SideOut. Focados em criar sites modernos, rápidos e que geram resultados reais.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seusite.com.br/">
+  <meta property="og:title" content="Portfólio | SideOut">
+  <meta property="og:description" content="Especialistas em criação de sites e landing pages para acelerar seus negócios.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+  
+  <meta name="theme-color" content="#0a0a0f">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- SUGESTÃO #2: Vanilla Tilt.js para Efeito 3D nos Cards -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+  
+
+  <!-- Background Blobs -->
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <header>
+    <div class="container header-content">
+      <div class="logo">&lt;Dev/&gt;</div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <nav>
+          <button class="tab-btn active interactive" data-tab="sobre" data-i18n="nav.sobre">Sobre</button>
+          <button class="tab-btn interactive" data-tab="projetos" data-i18n="nav.projetos">Projetos</button>
+          <button class="tab-btn interactive" data-tab="skills" data-i18n="nav.skills">Skills</button>
+          <button class="tab-btn interactive" data-tab="contato" data-i18n="nav.contato">Contato</button>
+        </nav>
+        <!-- SUGESTÃO #4: Tradução Instantânea EN/PT -->
+        <button id="lang-toggle" class="lang-btn interactive">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      
+      <!-- Sobre -->
+      <section id="sobre" class="tab-content active">
+        <div class="hero">
+          <div class="avatar stagger-item interactive">
+            <img src="assets/logo.png" alt="SideOut Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          </div>
+          
+          <h1 class="stagger-item" id="hero-title" data-i18n="hero.title">
+            Sites modernos e rápidos <br>
+            para <span>fazer seu negócio crescer</span>
+          </h1>
+          
+          <p class="subtitle stagger-item">
+            <span id="typewriter"></span><span class="cursor-typing"></span><br>
+          </p>
+          
+          <div class="social-links stagger-item">
+            <a href="https://www.linkedin.com/in/lucas-cer1" target="_blank" title="LinkedIn" class="interactive">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:sideout.df@gmail.com?subject=Contato%20via%20Portf%C3%B3lio&body=Ol%C3%A1%20equipe%20SideOut,%20vim%20pelo%20portf%C3%B3lio%20da%20ag%C3%AAncia.%20Gostaria%20de%20conversar%20sobre%20um%20projeto." id="email-icon-link" title="Email" class="interactive">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+        
+        <h2 class="section-title stagger-item" data-i18n="hero.aboutTitle">Sobre Mim</h2>
+        <div class="about-text stagger-item" id="about-text" data-i18n-html="hero.aboutText">
+          <!-- Text is injected by JS translations -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 32px;" class="stagger-item">
+            <a href="https://wa.me/5561998248425" target="_blank" class="submit-btn interactive" style="display: inline-flex; width: auto; padding: 14px 28px; font-size: 1.05rem; border-radius: 50px; background: var(--surface); border: 1px solid #25D366; color: #fff; box-shadow: none;">
+              <i data-lucide="message-circle" style="margin-right: 8px; color: #25D366;"></i> <span data-i18n="hero.cta">Fazer um Orçamento no WhatsApp</span>
+            </a>
+        </div>
+      </section>
+
+      <!-- Projetos -->
+      <section id="projetos" class="tab-content">
+        <h2 class="section-title stagger-item" data-i18n="projects.title">Meus Projetos</h2>
+        
+        <!-- Renderização Dinâmica e Modais Profundos -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Renderizados por JS pelo script.js -->
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="tab-content">
+        <h2 class="section-title stagger-item" data-i18n="skills.title">Minhas Skills</h2>
+        <div class="skills-grid" id="skills-container">
+          <!-- Renderizados por JS pelo script.js -->
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="tab-content">
+        <h2 class="section-title stagger-item" data-i18n="contact.title">Fale Comigo</h2>
+        <div class="contact-wrapper">
+          
+          <div class="contact-info stagger-item">
+            <h3 data-i18n="contact.subtitle">Vamos conversar!</h3>
+            <p data-i18n="contact.desc">Estou disponível para freelance, oportunidades de trabalho ou apenas para trocar uma ideia. Sinta-se à vontade para me enviar uma mensagem.</p>
+            <div class="contact-item">
+              <span><i data-lucide="mail"></i></span>
+              <div>sideout.df@gmail.com</div>
+            </div>
+            <div class="contact-item">
+              <span><i data-lucide="map-pin"></i></span>
+              <div data-i18n="contact.location">Brasil</div>
+            </div>
+            <div class="contact-item">
+              <span><i data-lucide="briefcase"></i></span>
+              <div>linkedin.com/in/lucas-cer1</div>
+            </div>
+          </div>
+          
+          <!-- Formulário -->
+          <form class="contact-form stagger-item" id="contact-form">
+            <div class="form-group">
+              <label for="nome" id="label-nome" data-i18n="contact.form.name">Nome</label>
+              <input type="text" id="nome" name="nome" required class="interactive">
+            </div>
+            <div class="form-group">
+              <label for="email" id="label-email" data-i18n="contact.form.email">Email</label>
+              <input type="email" id="email" name="email" required class="interactive">
+            </div>
+            <div class="form-group">
+              <label for="mensagem" id="label-msg" data-i18n="contact.form.msg">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" required class="interactive"></textarea>
+            </div>
+            <button type="submit" class="submit-btn interactive">
+              <span id="btn-submit" data-i18n="contact.form.btn">Enviar Mensagem</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+          
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- SUGESTÃO #3: Modais (Lightbox) de Projeto -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content interactive">
+      <button class="modal-close interactive" id="modal-close"><i data-lucide="x"></i></button>
+      <div id="modal-icon" style="height:120px; font-size:48px; border-radius: 8px 8px 0 0; margin: -32px -32px 24px -32px;"></div>
+      <h2 id="modal-title" style="margin-bottom: 8px; color: var(--text);">Title</h2>
+      <div class="project-tags" id="modal-tags" style="margin-bottom: 24px;"></div>
+      <div id="modal-desc" style="color: var(--muted); line-height: 1.6; margin-bottom: 24px;"></div>
+      <div class="project-links" id="modal-links"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p><span data-i18n="footer.text">© 2026 SideOut. Feito com</span> <i data-lucide="coffee"></i> <span data-i18n="footer.code">e código.</span></p>
+  </footer>
+
+  <script src="script.js?v=6"></script>
+</body>
+</html>
