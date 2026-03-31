@@ -301,6 +301,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tabContents.forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById(tabId).classList.add('active');
+      
+      // Rola suavemente para o topo da página após trocar de aba
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
